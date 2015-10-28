@@ -403,37 +403,23 @@
 		// Flashlights /\\//\\/\\
 		/////////////////////////////////////////
 		
-		"sec_flashlight_rail"
+		"siderail_flashlight_band"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"sec_flashlight_band"
+		"siderail_flashlight_rail"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"ins_flashlight_band"
+		"siderail_flashlight_shotgun"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"sec_flashlight_shotgun"
-		{
-			"upgrade_cost"					"0"
-		}
 		
-		"ins_flashlight_shotgun"
-		{
-			"upgrade_cost"					"0"
-		}
-		
-		"sec_flashlight_pistol"
-		{
-			"upgrade_cost"					"0"
-		}
-		
-		"ins_flashlight_pistol"
+		"siderail_flashlight_pistol"
 		{
 			"upgrade_cost"					"0"
 		}
@@ -442,40 +428,36 @@
 		// Lazors
 		/////////////////////////////////////////
 		
-		"sec_lasersight_rail"
+		"siderail_lasersight_rail"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"sec_lasersight_band"
+		"siderail_lasersight_band"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"ins_lasersight_band"
+		"siderail_lasersight_shotgun_sec"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"sec_lasersight_shotgun"
+		"siderail_lasersight_shotgun_ins"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"ins_lasersight_shotgun"
+		"siderail_lasersight_pistol"
 		{
 			"upgrade_cost"					"0"
 		}
 		
-		"sec_lasersight_pistol"
-		{
-			"upgrade_cost"					"0"
-		}
 		
-		"ins_lasersight_pistol"
-		{
-			"upgrade_cost"					"0"
-		}
+		////// Tugger fixes stop here
+		
+		
+		
 		
 		/////////////////////////////////////////
 		// Optics
@@ -855,37 +837,11 @@
 		"ins_woodgrip"
 		{
 			"upgrade_cost"					"2"
-			"allowed_weapons"				
-			{	
-											"weapon"		"weapon_akm"
-											"weapon"		"weapon_ak74"
-			}
 		}
 		
 		"ins_woodgrip2"
 		{
-			"import"						"base_foregrip"
 			"upgrade_cost"					"2"
-			
-			"allowed_weapons"
-			{	
-				"weapon"					"weapon_aks74u"
-			}
-			"viewmodel_attachments"
-			{
-				
-				"Foregrip_AKS"
-				{
-					"model"					"models/weapons/upgrades/a_woodgrips_aks74u.mdl"
-					"Gesture"				"delta_foregrip"
-					"ActSuffix"				"_FOREGRIP"
-					
-					"weapons"
-					{
-						"weapon"			"weapon_aks74u"
-					}
-				}
-			}	
 		}
 				
 		"sec_foregrip"
@@ -969,7 +925,7 @@
 		// Security Classes /\\//\\/\\
 		/////////////////////////////////////////
 		
-		"template_specialist_security"
+		"template_flanker_security"
 		{	
 			"team"			"security"			
 			"print_name"	"#Squad_Fireteam_Specialist"	
@@ -1024,7 +980,7 @@
 			}
 		}
 		
-		"template_rifleman_security"
+		"template_assault_security"
 		{	
 			"team"			"security"
 			"print_name"	"#Squad_Fireteam_Rifleman"
@@ -1078,7 +1034,7 @@
 			}
 		}
 		
-		"template_designated_marksman_security"
+		"template_sharpshooter_security"
 		{	
 			"team"			"security"
 			"print_name"	"#Squad_Fireteam_Designated_Marksman"
@@ -1162,7 +1118,7 @@
 		// Insurgent Classes /\\//\\/\\
 		/////////////////////////////////////////
 		
-		"template_specialist_insurgent"
+		"template_flanker_insurgenct"
 		{	
 			"team"			"insurgents"
 			"print_name"	"#Squad_Cell_Specialist"
@@ -1206,13 +1162,12 @@
 				"weapon_upgrade"	"ins_silencer"
 				"weapon_upgrade"	"ins_silencer_pistol"
 				"weapon_upgrade"	"underbarrel_gp25_smoke"
-				"weapon_upgrade"	"ins_woodgrip2"
 			}
 			
 		}
 		
 		
-		"template_fighter_insurgent"
+		"template_assault_insurgent" //insurgenct assault
 		{	
 			"team"			"insurgents"
 			"print_name"	"#Squad_Cell_Fighter"
@@ -1252,8 +1207,9 @@
 				
 				// Upgrades
 				
-				"weapon_upgrade"	"ins_silencer"
-				"weapon_upgrade"	"ins_silencer_pistol"
+				"weapon_upgrade"	"underbarrel_woodgrip"
+				"weapon_upgrade"	"barrel_silencer_ins1"
+				"weapon_upgrade"	"barrel_silencer_pistol"
 				"weapon_upgrade"	"underbarrel_gp25_smoke"
 			}
 		}
@@ -1334,11 +1290,11 @@
 			{
 				"Security Forces - TheDGL.org"
 				{
-					"Flanker"				"template_specialist_security"
-					"Flanker"					"template_specialist_security"
-					"Assault"						"template_rifleman_security"
-					"Assault"						"template_rifleman_security"
-					"Sharpshooter"			"template_designated_marksman_security"
+					"Flanker"				"template_flanker_security"
+					"Flanker"					"template_flanker_security"
+					"Assault"						"template_assault_security"
+					"Assault"						"template_assault_security"
+					"Sharpshooter"			"template_sharpshooter_security"
 				}
 				" "
 				{
@@ -1357,10 +1313,10 @@
 			{
 				"Insurgent Forces - TheDGL.org"
 				{
-					"Flanker"					"template_specialist_insurgent"
-					"Flanker"						"template_specialist_insurgent"
-					"Assault"							"template_fighter_insurgent"
-					"Assault"							"template_fighter_insurgent"
+					"Flanker"					"template_flanker_insurgenct"
+					"Flanker"						"template_flanker_insurgenct"
+					"Assault"							"template_assault_insurgent"
+					"Assault"							"template_assault_insurgent"
 					"Sharpshooter"						"template_sharpshooter_insurgent"
 				}
 				" "
@@ -1373,5 +1329,4 @@
 		}
 	}
 }
-
 
