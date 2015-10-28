@@ -1,8 +1,3 @@
-// Official DGL Theater File - TheDGL.org
-// Version: DGL Firefight v316 2015-03-29
-// Authors: Kate, Outlawled, F1chT4c0, KCiV, et al.
-
-
 "#base" "base_player.theater"
 "#base" "default_weapon.theater"
 "#base" "default_weapon_upgrades.theater"
@@ -1379,6 +1374,4 @@
 	}
 }
 
-// Official DGL Theater File - TheDGL.org
-// Version: DGL Firefight v316 2015-03-29
-// Authors: Kate, Outlawled, F1chT4c0, KCiV, et al.
+
